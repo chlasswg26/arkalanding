@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservation</title>
+    <script src="https://kit.fontawesome.com/31c6516149.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/gh/mailtoharshit/San-Francisco-Font-/sanfrancisco.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
+    <style>
+        body,
+        html {
+
+            position: fixed;
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            color: #777;
+        }
+
+        .background {
+            position: relative;
+            height: 100%;
+            width: 100%;
+            opacity: 0.65;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .background {
+            background-image: url("assets/bg2.png");
+        }
+
+        .container {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+
+            background: rgba(38, 36, 46, 0.863);
+        }
+
+        .prev {
+            position: sticky;
+            width: 24px;
+            height: 0px;
+            left: 80px;
+            top: 80px;
+
+            font-style: normal;
+            font-weight: normal;
+            font-size: 48px;
+            line-height: 84px;
+
+            text-decoration: none !important;
+            color: #FCB371;
+            box-sizing: border-box;
+            transform: rotate(-180deg);
+        }
+
+        .title {
+            position: absolute;
+            left: 518px;
+            right: 519px;
+            top: 58px;
+            bottom: 578px;
+
+            font-family: Pacifico;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 48px;
+            line-height: 84px;
+            text-align: center;
+
+            color: #FCB371;
+        }
+
+        input[name=name] {
+            display: flex;
+            flex-direction: row;
+            padding: 16px;
+
+            position: absolute;
+            width: 382px;
+            height: 46px;
+            left: calc(100% - 382px/2);
+            top: calc(100% - 46px/2 - 128px);
+
+            background: #FFFFFF;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 8px;
+        }
+
+        input[name=name] {
+            position: fixed;
+            width: 350px;
+            height: 14px;
+            left: 495px;
+            top: 240px;
+
+            font-family: San Francisco;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 14px;
+            display: auto;
+            align-items: center;
+
+            color: #A9A9A9;
+
+            flex: none;
+            order: 0;
+            align-self: center;
+            margin: 10px 0px;
+        }
+
+        input[name=email] {
+            display: flex;
+            flex-direction: row;
+            padding: 16px;
+
+            position: absolute;
+            width: 382px;
+            height: 46px;
+            left: calc(50% - 382px/2 + 0.5px);
+            top: calc(50% - 46px/2 - 66px);
+
+            background: #FFFFFF;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 8px;
+        }
+
+        input[name=email] {
+            position: fixed;
+            width: 350px;
+            height: 14px;
+            left: 495px;
+            top: 300px;
+
+            font-family: San Francisco;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 14px;
+            display: auto;
+            align-items: center;
+
+            color: #A9A9A9;
+
+            flex: none;
+            order: 0;
+            align-self: center;
+            margin: 10px 0px;
+        }
+
+        input[name=phone] {
+            display: flex;
+            flex-direction: row;
+            padding: 16px;
+
+            position: absolute;
+            width: 177px;
+            height: 46px;
+            left: calc(50% - 177px/2 - 102px);
+            top: calc(50% - 46px/2 - 4px);
+
+            background: #FFFFFF;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 8px;
+        }
+
+        input[name=phone] {
+            position: fixed;
+            width: 145px;
+            height: 14px;
+            left: 495px;
+            top: 360px;
+
+            font-family: San Francisco;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 14px;
+            display: auto;
+            align-items: center;
+
+            color: #A9A9A9;
+
+            flex: none;
+            order: 0;
+            align-self: center;
+            margin: 10px 0px;
+        }
+
+        select[name=nation] {
+            display: flex;
+            flex-direction: none;
+            padding: 23px;
+
+            position: absolute;
+            width: 189px;
+            height: 46px;
+            left: calc(50% - 189px/2 + 97px);
+            top: calc(50% - 46px/2 - 4px);
+
+            background: #FFFFFF;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 8px;
+        }
+        
+        select[name=nation] {
+            position: fixed;
+            width: 12px;
+            height: 12px;
+            left: 173px;
+            top: 28px;
+        }
+
+        select[name=nation] {
+            position: fixed;
+            width: 175px;
+            height: 14px;
+            left: 705px;
+            top: 370px;
+
+            font-family: San Francisco;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 14px;
+
+        }
+
+        textarea {
+            display: flex;
+            flex-direction: row;
+            padding: 16px;
+
+            position: absolute;
+            width: 382px;
+            height: 116px;
+            left: calc(50% - 382px/2 + 0.5px);
+            top: calc(50% - 116px/2 + 93px);
+
+            background: #FFFFFF;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 8px;
+        }
+
+        textarea {
+            position: fixed;
+            width: 350px;
+            height: 84px;
+            left: 495px;
+            top: 420px;
+
+            font-family: San Francisco;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 14px;
+            display: auto;
+            align-items: center;
+
+            color: rgb(169, 169, 169);
+
+            flex: none;
+            order: 0;
+            align-self: center;
+            margin: 10px 0px;
+        }
+
+        button[type=submit] {
+            position: absolute;
+            width: 380px;
+            height: 46px;
+            left: 495px;
+            top: 560px;
+
+            text-decoration: none !important;
+            font-family: Pacifico;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 21px;
+
+            display: auto;
+            align-items: center;
+            text-align: center;
+
+            color: #FFFFFF;
+
+            background: rgb(255, 131, 22);
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 8px;
+        }
+    </style>
+
+</head>
+
+<body class="background">
+    <div class="container">
+        <a href="index.html" type="button" class="prev">
+            <i class="fas fa-arrow-left"></i>
+        </a>
+
+        <p class="title">
+            Reservation
+        </p>
+
+        <form action="/" method="post">
+            <input type="text" placeholder="Input your name" name="name" required>
+
+            <input type="email" placeholder="Input your email" name="email" required>
+
+            <input type="number" placeholder="Phone number" name="phone" required>
+
+            <select name="nation">
+                <option selected>Select your nationality</option>
+            </select>
+
+            <textarea>Explain about your trip</textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+
+</html>
